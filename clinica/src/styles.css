@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+  --ouro: #b8923a;
+  --ouro-claro: #e6d3a3;
+  --ouro-escuro: #8f6f24;
+  --fundo: #faf8f3;
+  --texto: #2b2b2b;
+  --cinza: #6b6b6b;
+  --erro: #b3261e;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+app-root {
+  display: block;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 2px;
+  background: var(--ouro);
+  margin: 14px auto 0;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 0 0 20px;
+}
+
+app-cadastro-consulta,
+app-lista-consultas {
+  display: block;
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  border-top: 3px solid var(--ouro);
+  box-shadow: 0 8px 24px rgba(143, 111, 36, 0.08);
+  margin-bottom: 24px;
+}
+
+hr {
+  display: none;
+}

@@ -1,0 +1,26 @@
+<h2>Consultas cadastradas</h2>
+
+@if (service.consultas().length === 0) {
+  <p>Nenhuma consulta cadastrada.</p>
+} @else {
+  <table>
+    <thead>
+      <tr>
+        <th>Paciente</th>
+        <th>Data</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (c of service.consultas(); track $index) {
+        <tr>
+          <td>{{ c.nomePaciente }}</td>
+          <td>{{ c.data | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ c.preco | currency: 'BRL' }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <p><strong>Total apurado: {{ service.calcularTotal() | currency: 'BRL' }}</strong></p>
+}

@@ -1,0 +1,29 @@
+<h2>Cadastrar consulta</h2>
+
+<form [formGroup]="form" (ngSubmit)="cadastrar()">
+  <div>
+    <label for="nome">Nome do paciente</label>
+    <input id="nome" type="text" formControlName="nomePaciente" />
+    @if (form.controls.nomePaciente.touched && form.controls.nomePaciente.invalid) {
+      <small class="erro">Informe o nome do paciente.</small>
+    }
+  </div>
+
+  <div>
+    <label for="preco">Preço (R$)</label>
+    <input id="preco" type="number" step="0.01" formControlName="preco" />
+    @if (form.controls.preco.touched && form.controls.preco.invalid) {
+      <small class="erro">Informe um preço maior que 0.</small>
+    }
+  </div>
+
+  <div>
+    <label for="data">Data</label>
+    <input id="data" type="date" formControlName="data" />
+    @if (form.controls.data.touched && form.controls.data.invalid) {
+      <small class="erro">Informe a data.</small>
+    }
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Cadastrar</button>
+</form>

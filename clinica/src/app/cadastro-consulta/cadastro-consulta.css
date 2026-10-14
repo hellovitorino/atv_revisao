@@ -1,0 +1,71 @@
+form {
+  display: grid;
+  gap: 18px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cinza);
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 12px 14px;
+  border: 1px solid #e5e0d3;
+  border-radius: 10px;
+  font: inherit;
+  background: #fdfcf9;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--ouro);
+  box-shadow: 0 0 0 4px rgba(184, 146, 58, 0.15);
+  background: #fff;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: var(--erro);
+}
+
+button {
+  margin-top: 6px;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(135deg, #caa752, #a8832c);
+  box-shadow: 0 6px 16px rgba(168, 131, 44, 0.3);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(168, 131, 44, 0.35);
+}
+
+button:disabled {
+  background: #e9e4d6;
+  color: #a9a390;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.erro {
+  color: var(--erro);
+  font-size: 0.82rem;
+  margin-top: 6px;
+}
